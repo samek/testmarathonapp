@@ -1,0 +1,18 @@
+<ul>
+    <li ng-repeat="box in voyobox">
+        <div ng-if="box.function==''">
+        <h1>{{box.name}}</h1>
+
+        <ul>
+            <li ng-repeat="sub in box.positions">
+                <div ng-if="sub.type!='custom'">
+                <p><center><b><a href="#/front/{{sub.media_id}}">{{sub.title}}</a></b></center></p>
+                <p><a href="#/front/{{sub.media_id}}"><img height="100" width="200" src={{sub.image.replace("PLACEHOLDER","500x370")}}></a></p>
+                <span >{{sub.description.slice(0,18)}} ...</span>
+                </div>
+
+            </li>
+        </ul>
+        </div>
+    </li>
+</ul>

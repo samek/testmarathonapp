@@ -1,11 +1,7 @@
 <h1 align="center">{{voyomedia.title}}</h1>
-<!--<p align="center"><img ng-src={{voyomedia.imageUrl.replace("PLACEHOLDER","500x370")}}></p> -->
+<p align="center"><a href="{{voyomedia.videoUrl}}"><img ng-src={{voyomedia.imageUrl.replace("PLACEHOLDER","500x370")}}></a></p> -->
 
-<video controls poster={{voyomedia.imageUrl.replace("PLACEHOLDER","500x370")}} >
-    <source  ng-src="{{voyomedia.videoUrl}}" type="application/x-mpegurl">
-</video>
 
-        <p>{{voyomedia.videoUrl}}</p>
 
 <p>{{voyomedia.summary}}</p>
 <ol align="center">

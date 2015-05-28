@@ -1,5 +1,8 @@
 <h1 align="center">{{voyomedia.title}}</h1>
-<p align="center"><img ng-src={{voyomedia.imageUrl.replace("PLACEHOLDER","500x370")}}></p>
+<!--<p align="center"><img ng-src={{voyomedia.imageUrl.replace("PLACEHOLDER","500x370")}}></p> -->
+
+<video controls poster="{{voyomedia.imageUrl.replace("PLACEHOLDER","500x370")}}" src="{{videoUrl}}">
+
 <p>{{voyomedia.summary}}</p>
 <ol align="center">
     <li><h4>{{voyomedia.metadata.original_name.name}} :</h4> {{voyomedia.metadata.original_name.value}} </li>

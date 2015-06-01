@@ -1,18 +1,117 @@
 <!doctype html>
 <html lang="en" ng-app="voyoApp" xmlns="http://www.w3.org/1999/html">
-<head>
-  <meta charset="utf-8">
-  <title>CrateTest</title>
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="css/app.css">
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/controllers.js"></script>
-</head>
-
-<body>
-<div ng-view></div>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<title>VOYO NEW</title>
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/angular-route/angular-route.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/controllers.js"></script>
+		
+		
+	</head>
+	
+	<body>
+		
+		<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+		  <div class="container">
+		    
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="">
+		      	<img src="img/logo.png" alt="" />
+		      </a>
+		    </div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li class="dropdown">
+		          <a href="" class="dropdown-toggle" data-toggle="dropdown">IZBERI+POGLEJ <span class="caret"></span></a>
+		          <ul class="dropdown-menu" role="menu">
+		            <li><a href="#">Action</a></li>
+		            <li><a href="#">Another action</a></li>
+		          </ul>
+		        </li>
+		        <li class="dropdown">
+		          <a href="" class="dropdown-toggle" data-toggle="dropdown">TV <span class="caret"></span></a>
+		          <ul class="dropdown-menu" role="menu">
+		            <li><a href="#">Action</a></li>
+		            <li><a href="#">Another action</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><p class="navbar-text">Že imaš račun?</p></li>
+		        <li class="dropdown">
+		          <a href="" class="dropdown-toggle" data-toggle="dropdown"><b>Prijavi se</b> <span class="caret"></span></a>
+					<ul id="login-dp" class="dropdown-menu">
+						<li>
+							 <div class="row">
+									<div class="col-md-12">
+										Prijavi se z
+										<div class="social-buttons">
+											<a href="#" class="btn btn-fb round"><i class="fa fa-facebook"></i> Facebook</a>
+											<a href="#" class="btn btn-tw round"><i class="fa fa-twitter"></i> Twitter</a>
+										</div>
+		                                ali
+										 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+												<div class="form-group">
+													 <label class="sr-only" for="exampleInputEmail2">Email</label>
+													 <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+												</div>
+												<div class="form-group">
+													 <label class="sr-only" for="exampleInputPassword2">Geslo</label>
+													 <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+		                                             <div class="help-block text-right"><a href="">Pozabljeno geslo?</a></div>
+												</div>
+												<div class="form-group">
+													 <button type="submit" class="btn btn-primary btn-block round">Prijava</button>
+												</div>
+												<div class="checkbox">
+													 <label>
+													 	<input type="checkbox"> ostani prijavljen
+													 </label>
+												</div>
+										 </form>
+									</div>
+									<div class="bottom text-center">
+										Nov uporabnik? <a href="#"><b>Registriraj se</b></a>
+									</div>
+							 </div>
+						</li>
+					</ul>
+		        </li>
+		      </ul>
+		      <form class="navbar-form navbar-right" role="search">
+		        <div class="form-group">
+		          <input type="text" class="form-control round br-none" placeholder="Search">
+		        </div>
+		      </form>
+		    </div>
+		  </div>
+		</nav>
+		
+		
+		
+		
+		<div ng-view></div>
+		
+		
+		<script src="js/carousel.js"></script>
+		
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+		<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+		
+	</body>
+	
+	
 
 </html>

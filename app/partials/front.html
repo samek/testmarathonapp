@@ -1,18 +1,86 @@
-<ul>
-    <li ng-repeat="box in voyobox">
-        <div ng-if="box.function==''">
-        <h1>{{box.name}}</h1>
+<div class="container-fluid">
+	<div class="row">
+	        <!-- The carousel -->
+	        <div id="transition-timer-carousel" class="carousel slide transition-timer-carousel" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#transition-timer-carousel" data-slide-to="0" class="active"></li>
+					<li data-target="#transition-timer-carousel" data-slide-to="1"></li>
+					<li data-target="#transition-timer-carousel" data-slide-to="2"></li>
+				</ol>
+	
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+					<div class="item active">
+	                    <img src="http://placehold.it/1200x400" />
+	                    <div class="carousel-caption">
+	                        <h1 class="carousel-caption-header">Slide 1</h1>
+	                        <p class="carousel-caption-text hidden-sm hidden-xs">
+	                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim aliquet rutrum. Praesent vitae ante in nisi condimentum egestas. Aliquam.
+	                        </p>
+	                    </div>
+	                </div>
+	                
+	                <div class="item">
+	                    <img src="http://placehold.it/1200x400/AAAAAA/888888" />
+	                    <div class="carousel-caption">
+	                        <h1 class="carousel-caption-header">Slide 2</h1>
+	                        <p class="carousel-caption-text hidden-sm hidden-xs">
+	                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim aliquet rutrum. Praesent vitae ante in nisi condimentum egestas. Aliquam.
+	                        </p>
+	                    </div>
+	                </div>
+	                
+	                <div class="item">
+	                    <img src="http://placehold.it/1200x400/888888/555555" />
+	                    <div class="carousel-caption">
+	                        <h1 class="carousel-caption-header">Slide 3</h1>
+	                        <p class="carousel-caption-text hidden-sm hidden-xs">
+	                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim aliquet rutrum. Praesent vitae ante in nisi condimentum egestas. Aliquam.
+	                        </p>
+	                    </div>
+	                </div>
+	            </div>
+	
+				<!-- Controls -->
+				<a class="left carousel-control" href="#transition-timer-carousel" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
+				<a class="right carousel-control" href="#transition-timer-carousel" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+	            
+	            <!-- Timer "progress bar" -->
+	            <hr class="transition-timer-carousel-progress-bar animate" />
+			</div>
+	    </div>
+</div>
 
-        <ul>
-            <li ng-repeat="sub in box.positions">
-                <div ng-if="sub.type!='custom'">
-                <p><center><b><a href="#/front/{{sub.media_id}}">{{sub.title}}</a></b></center></p>
-                <p><a href="#/front/{{sub.media_id}}"><img height="150" width="200" ng-src={{sub.image.replace("PLACEHOLDER","500x370")}}></a></p>
-                <span >{{sub.description.slice(0,18)}} ...</span>
-                </div>
-
-            </li>
-        </ul>
-        </div>
-    </li>
-</ul>
+<div class="container">
+	<div ng-repeat="box in voyobox">
+		
+		<div ng-if="box.function==''">
+			<div class="page-header">
+				<h1>{{box.name}}</h1>
+			</div>
+			<div class="row video-list">
+	            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 video-item" ng-repeat="sub in box.positions">
+	                <div ng-if="sub.type!='custom'">
+		                <a href="#/front/{{sub.media_id}}">
+		                	<div class="item-hover thumbnail">
+		                		<div class="thumb-icon"><div></div></div>
+		                		<img class="img-responsive" ng-src={{sub.image.replace("PLACEHOLDER","500x370")}}>
+		                	</div>
+		                	
+		                	<h4>{{sub.title}}</h4>
+		                </a>
+		                <p>
+		                	{{sub.description}} ...
+		                </p>
+	                </div>
+	            </div>
+	        </div>
+		</div>
+		
+	</div>
+</div>

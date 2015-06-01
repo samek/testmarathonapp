@@ -1,8 +1,228 @@
-/* app css stylesheet */
-li
-{
-    display: inline-block;
-    zoom: 1;
-    *display: inline;
-    padding: 5px;
+.video-list {
+	letter-spacing: -4px;
 }
+.video-list .video-item {
+	letter-spacing: normal;
+	display: inline-block;
+	vertical-align: top;
+	float: none;
+	margin-bottom: 30px;
+}
+.video-list .video-item a {
+	display: block;
+}
+.video-list .video-item .thumbnail {
+	margin-bottom: 5px;
+}
+.video-list .video-item h4 {
+	margin-bottom: 5px;
+	display: block;
+	font-size: 16px;
+	line-height: 22px;
+}
+.video-list .video-item:hover a h4 {
+	color: rgba(39, 118, 208, 1);
+	-webkit-transition:	all 0.1s ease-in-out;
+	-moz-transition:	all 0.1s ease-in-out;
+	-o-transition:		all 0.1s ease-in-out;
+	transition:			all 0.1s ease-in-out;
+}
+.video-list .video-item p {
+	margin: 0;
+	display: block;
+}
+.thumbnail {
+	padding: 0;
+	border: none;
+	-webkit-border-radius: 4px !important;
+	   -moz-border-radius: 4px !important;
+	        border-radius: 4px !important;
+	overflow: hidden;
+}
+
+.video-item a > div {
+	position: relative;
+}
+.video-item .thumb-icon {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    bottom: 0;
+    color: #fff;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    transition: all 0.2s ease-in-out 0s;
+    z-index: 4;
+}
+.video-item:hover .thumb-icon {
+    background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+}
+.video-item .thumb-icon div {
+    background-image: url("../img/play-icon.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    font-size: 40px;
+    height: 50px;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    position: absolute;
+    top: -60px;
+    transition: all 0.3s ease-in-out 0s;
+    width: 50px;
+}
+.video-item:hover .thumb-icon div {
+    top: 50%;
+}
+
+
+
+
+
+
+#login-dp{
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 49%;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc 
+}
+.btn-tw{
+    color: #fff;
+    background-color:#55acee;
+}
+.btn-tw:hover{
+    color: #fff;
+    background-color:#59b5fa;
+}
+@media(max-width:768px) {
+    #login-dp {
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom {
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
+
+
+
+
+
+
+.navbar-brand img {
+    position: relative;
+    top: -1px;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    height: 55px;
+}
+
+
+
+.navbar-brand,
+.navbar-nav > li > a,
+.navbar-text,
+.navbar-form {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	height: 60px;
+	line-height: 60px;
+}
+.navbar-form {
+	line-height: 55px;
+}
+
+
+
+
+
+
+.transition-timer-carousel .carousel-caption {
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 4%, rgba(0,0,0,0.5) 32%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(4%,rgba(0,0,0,0.1)), color-stop(32%,rgba(0,0,0,0.5)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+	width: 100%;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	text-align: left;
+	padding-top: 5px;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+.transition-timer-carousel .carousel-caption .carousel-caption-header {
+	margin-top: 10px;
+	font-size: 24px;
+}
+
+@media (min-width: 970px) {
+    /* Lower the font size of the carousel caption header so that our caption
+    doesn't take up the full image/slide on smaller screens */
+	.transition-timer-carousel .carousel-caption .carousel-caption-header {
+		font-size: 36px;
+	}
+}
+.transition-timer-carousel .carousel-indicators {
+	bottom: 0px;
+	margin-bottom: 5px;
+}
+.transition-timer-carousel .carousel-control {
+	z-index: 11;
+}
+.transition-timer-carousel .transition-timer-carousel-progress-bar {
+    height: 5px;
+    background-color: #5cb85c;
+    width: 0%;
+    margin: -5px 0px 0px 0px;
+    border: none;
+    z-index: 11;
+    position: relative;
+}
+.transition-timer-carousel .transition-timer-carousel-progress-bar.animate{
+    /* We make the transition time shorter to avoid the slide transitioning
+    before the timer bar is "full" - change the 4.25s here to fit your
+    carousel's transition time */
+    -webkit-transition: width 4.25s linear;
+	-moz-transition: width 4.25s linear;
+	-o-transition: width 4.25s linear;
+	transition: width 4.25s linear;
+}
+
+

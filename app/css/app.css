@@ -41,18 +41,18 @@
 	font-size: 11px;
 	line-height: 14px;
 }
-.video-list .video-item:hover a h1,
-.video-list .video-item:hover a h2,
-.video-list .video-item:hover a h3,
-.video-list .video-item:hover a h4,
-.video-list .video-item:hover a h5 {
+.video-list .item-hover:hover h1,
+.video-list .item-hover:hover h2,
+.video-list .item-hover:hover h3,
+.video-list .item-hover:hover h4,
+.video-list .item-hover:hover h5 {
 	color: rgba(39, 118, 208, 1);
 	-webkit-transition:	all 0.1s ease-in-out;
 	-moz-transition:	all 0.1s ease-in-out;
 	-o-transition:		all 0.1s ease-in-out;
 	transition:			all 0.1s ease-in-out;
 }
-.video-list .video-item .item-caption {
+.video-list .item-hover .item-caption {
 	margin: 0;
 	padding: 0 7px 12px;
 	display: none;
@@ -69,7 +69,7 @@
 	   -moz-border-radius: 0 0 4px 4px !important;
 	        border-radius: 0 0 4px 4px !important;
 }
-.video-list .video-item:hover .item-caption {
+.video-list .item-hover:hover .item-caption {
 	display: block;
 }
 .thumbnail {
@@ -81,7 +81,7 @@
 	overflow: hidden;
 }
 
-.video-list .video-item:hover .thumbnail {
+.video-list .item-hover:hover .thumbnail {
 	-webkit-border-radius: 4px 4px 0 0 !important;
 	   -moz-border-radius: 4px 4px 0 0 !important;
 	        border-radius: 4px 4px 0 0 !important;
@@ -89,7 +89,7 @@
 .video-item a > div {
 	position: relative;
 }
-.video-item .thumb-icon {
+.video-item .item-hover .thumb-icon {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     bottom: 0;
     color: #fff;
@@ -102,10 +102,10 @@
     transition: all 0.2s ease-in-out 0s;
     z-index: 4;
 }
-.video-item:hover .thumb-icon {
+.video-item .item-hover:hover .thumb-icon {
     background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
 }
-.video-item .thumb-icon div {
+.video-item .item-hover .thumb-icon div {
     background-image: url("../img/play-icon.svg");
     background-position: center center;
     background-repeat: no-repeat;
@@ -120,7 +120,7 @@
     transition: all 0.3s ease-in-out 0s;
     width: 50px;
 }
-.video-item:hover .thumb-icon div {
+.video-item .item-hover:hover .thumb-icon div {
     top: 50%;
 }
 

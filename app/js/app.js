@@ -4,7 +4,8 @@
 
 var voyoApp = angular.module('voyoApp', [
     'ngRoute',
-    'voyoControllers'
+    'voyoControllers',
+    'ui.bootstrap'
 ]);
 
 voyoApp.config(['$routeProvider',

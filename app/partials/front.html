@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div  ng-controller="splashController" class="container-fluid">
 	<div class="row">
 	        <!-- The carousel -->
 	        <div id="transition-timer-carousel" class="carousel slide transition-timer-carousel" data-ride="carousel">
@@ -10,48 +10,23 @@
 				</ol>
 	
 				<!-- Wrapper for slides -->
-				<div class="carousel-inner">
-					<div class="item active">
-	                    <img src="http://placehold.it/1200x400" />
-	                    <div class="carousel-caption">
-	                        <h1 class="carousel-caption-header">Slide 1</h1>
-	                        <p class="carousel-caption-text hidden-sm hidden-xs">
-	                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim aliquet rutrum. Praesent vitae ante in nisi condimentum egestas. Aliquam.
-	                        </p>
-	                    </div>
-	                </div>
-	                
-	                <div class="item">
-	                    <img src="http://placehold.it/1200x400/AAAAAA/888888" />
-	                    <div class="carousel-caption">
-	                        <h1 class="carousel-caption-header">Slide 2</h1>
-	                        <p class="carousel-caption-text hidden-sm hidden-xs">
-	                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim aliquet rutrum. Praesent vitae ante in nisi condimentum egestas. Aliquam.
-	                        </p>
-	                    </div>
-	                </div>
-	                
-	                <div class="item">
-	                    <img src="http://placehold.it/1200x400/888888/555555" />
-	                    <div class="carousel-caption">
-	                        <h1 class="carousel-caption-header">Slide 3</h1>
-	                        <p class="carousel-caption-text hidden-sm hidden-xs">
-	                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim aliquet rutrum. Praesent vitae ante in nisi condimentum egestas. Aliquam.
-	                        </p>
-	                    </div>
-	                </div>
+				<div class="carousel-inner" >
+
+
+                    <carousel interval="3000">
+                        <slide ng-repeat="splash in voyosplash" active="splash.active">
+                            <img ng-src={{splash.thumbnailUrl.replace("PLACEHOLDER","1900x600")}} style="margin:auto;">
+                            <div class="carousel-caption">
+                                <h4>{{splash.title}}</h4>
+                                <p>{{splash.text}}</p>
+                            </div>
+                        </slide>
+                    </carousel>
+
+
 	            </div>
 	
-				<!-- Controls -->
-				<a class="left carousel-control" href="#transition-timer-carousel" data-slide="prev">
-					<span class="glyphicon glyphicon-chevron-left"></span>
-				</a>
-				<a class="right carousel-control" href="#transition-timer-carousel" data-slide="next">
-					<span class="glyphicon glyphicon-chevron-right"></span>
-				</a>
-	            
-	            <!-- Timer "progress bar" -->
-	            <hr class="transition-timer-carousel-progress-bar animate" />
+
 			</div>
 	    </div>
 </div>

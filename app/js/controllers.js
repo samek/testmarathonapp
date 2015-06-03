@@ -10,7 +10,7 @@ voyoControllers.controller('VoyoBox', ['$scope', '$http',
             $scope.voyobox = data.data;
         });
 
-        $scope.orderProp = 'age';
+
     }]);
 
 voyoControllers.controller('VoyoMedia', ['$scope', '$routeParams','$http',
@@ -20,3 +20,13 @@ voyoControllers.controller('VoyoMedia', ['$scope', '$routeParams','$http',
             $scope.voyomedia = data.data;
         });
     }]);
+
+voyoControllers.controller('splashController', ['$scope', '$http',
+    function($scope, $http) {
+        $http.get('http://sporedtest.24ur.com/5d69d13266db4f5b48a519cf8e582751/splash').success(function(data) {
+            $scope.voyosplash = data.data;
+        });
+
+
+    }]);
+

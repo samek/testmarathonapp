@@ -1,39 +1,26 @@
 <div  ng-controller="splashController" class="container-fluid">
 	<div class="row">
-	        <!-- The carousel -->
-	        <div id="transition-timer-carousel" class="carousel slide transition-timer-carousel" data-ride="carousel">
-				<!-- Indicators -->
-				<ol class="carousel-indicators">
-					<li data-target="#transition-timer-carousel" data-slide-to="0" class="active"></li>
-					<li data-target="#transition-timer-carousel" data-slide-to="1"></li>
-					<li data-target="#transition-timer-carousel" data-slide-to="2"></li>
-				</ol>
-	
-				<!-- Wrapper for slides -->
-				<div class="carousel-inner" >
-
-
-                    <carousel interval="3000">
-                        <slide ng-repeat="splash in voyosplash" active="splash.active">
-                            <img ng-src={{splash.thumbnailUrl.replace("PLACEHOLDER","1900x600")}} style="margin:auto;">
-                            <div class="carousel-caption">
-                                <h4>{{splash.title}}</h4>
-                                <p>{{splash.text}}</p>
-                            </div>
-                        </slide>
-                    </carousel>
-
-
-	            </div>
-	
-
+		<div id="transition-timer-carousel" class="carousel slide transition-timer-carousel" data-ride="carousel">
+			<div class="timer">
+				<div class="timer-progress" style="width: 40%;"></div>
 			</div>
-	    </div>
+			<div class="carousel-inner" >
+				<carousel interval="3000">
+					<slide ng-repeat="splash in voyosplash" active="splash.active">
+						<img ng-src={{splash.thumbnailUrl.replace("PLACEHOLDER","1900x600")}}>
+						<div class="carousel-caption">
+							<h2>{{splash.title}}</h2>
+							<p>{{splash.text}}</p>
+							<a class="btn btn-primary btn-lg round mt-10" href="#">Watch now</a>
+						</div>
+					</slide>
+				</carousel>
+			</div>
+		</div>
+	</div>
 </div>
-
 <div class="container">
 	<div ng-repeat="box in voyobox">
-		
 		<div ng-if="box.function==''">
 			<div class="page-header">
 				<h1>{{box.name}}</h1>
@@ -41,21 +28,26 @@
 			<div class="row video-list">
 	            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 video-item" ng-repeat="sub in box.positions">
 	                <div ng-if="sub.type!='custom'">
-		                <a href="#/front/{{sub.media_id}}">
-		                	<div class="item-hover thumbnail">
+		                <a class="item-hover" href="#/front/{{sub.media_id}}">
+		                	<div class="thumbnail">
 		                		<div class="thumb-icon"><div></div></div>
 		                		<img class="img-responsive" ng-src={{sub.image.replace("PLACEHOLDER","500x370")}}>
 		                	</div>
 		                	
-		                	<h4>{{sub.title}}</h4>
+		                	<h3>
+		                		{{sub.title}}
+		                		<small>{{sub.title}}</small>
+		                	</h3>
+		                	
+		                	<div class="item-caption">
+		                		<hr class="mt-none mb-10" />
+		                		{{sub.description}} ...
+		                	</div>
 		                </a>
-		                <p>
-		                	{{sub.description}} ...
-		                </p>
+		                
 	                </div>
 	            </div>
 	        </div>
 		</div>
-		
 	</div>
 </div>

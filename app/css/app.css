@@ -7,28 +7,69 @@
 	vertical-align: top;
 	float: none;
 	margin-bottom: 30px;
+	position: relative;
 }
 .video-list .video-item a {
 	display: block;
 }
 .video-list .video-item .thumbnail {
-	margin-bottom: 5px;
+	/*margin-bottom: 5px;*/
+	margin: 0 !important;
 }
-.video-list .video-item h4 {
-	margin-bottom: 5px;
+.video-list .video-item h1,
+.video-list .video-item h2,
+.video-list .video-item h3,
+.video-list .video-item h4,
+.video-list .video-item h5 {
 	display: block;
 	font-size: 16px;
-	line-height: 22px;
+	line-height: 20px;
+	margin: 0 !important;
+	padding: 10px 7px;
+	-webkit-border-radius: 0 0 4px 4px !important;
+	   -moz-border-radius: 0 0 4px 4px !important;
+	        border-radius: 0 0 4px 4px !important;
 }
-.video-list .video-item:hover a h4 {
+.video-list .video-item h1 small,
+.video-list .video-item h2 small,
+.video-list .video-item h3 small,
+.video-list .video-item h4 small,
+.video-list .video-item h5 small {
+	display: block;
+	margin-top: 4px;
+	color: #999;
+	font-size: 11px;
+	line-height: 14px;
+}
+.video-list .video-item:hover a h1,
+.video-list .video-item:hover a h2,
+.video-list .video-item:hover a h3,
+.video-list .video-item:hover a h4,
+.video-list .video-item:hover a h5 {
 	color: rgba(39, 118, 208, 1);
 	-webkit-transition:	all 0.1s ease-in-out;
 	-moz-transition:	all 0.1s ease-in-out;
 	-o-transition:		all 0.1s ease-in-out;
 	transition:			all 0.1s ease-in-out;
 }
-.video-list .video-item p {
+.video-list .video-item .item-caption {
 	margin: 0;
+	padding: 0 7px 12px;
+	display: none;
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 99%;
+	font-size: 12px;
+	line-height: 16px;
+	box-shadow: 0 15px 15px rgba(0,0,0,0.3);
+	color: #777;
+	-webkit-border-radius: 0 0 4px 4px !important;
+	   -moz-border-radius: 0 0 4px 4px !important;
+	        border-radius: 0 0 4px 4px !important;
+}
+.video-list .video-item:hover .item-caption {
 	display: block;
 }
 .thumbnail {
@@ -40,6 +81,11 @@
 	overflow: hidden;
 }
 
+.video-list .video-item:hover .thumbnail {
+	-webkit-border-radius: 4px 4px 0 0 !important;
+	   -moz-border-radius: 4px 4px 0 0 !important;
+	        border-radius: 4px 4px 0 0 !important;
+}
 .video-item a > div {
 	position: relative;
 }
@@ -165,10 +211,18 @@
 	line-height: 55px;
 }
 
+.transition-timer-carousel .carousel-inner {
+	height: 600px;
+}
 
 
 
-
+.transition-timer-carousel {
+	background-image: url(../img/header-bg.jpg);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
 
 .transition-timer-carousel .carousel-caption {
     background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 4%, rgba(0,0,0,0.5) 32%, rgba(0,0,0,1) 100%); /* FF3.6+ */
@@ -178,14 +232,69 @@
     background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* IE10+ */
     background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
-	width: 100%;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
+	max-width: 360px;
+	left: 15%;
+	right: auto;
+	bottom: auto;
+	top: 10%;
 	text-align: left;
-	padding-top: 5px;
-	padding-left: 15%;
-	padding-right: 15%;
+	padding: 25px;
+}
+.transition-timer-carousel .carousel-indicators {
+	margin: 0 !important;
+	padding: 40px 0 30px !important;
+	width: 100%;
+	left: 0;
+	right: 0;
+	
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.35)));
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.35) 100%);
+	background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.35) 100%);
+	background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.35) 100%);
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.35) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#59000000',GradientType=0 );
+	
+	
+}
+.carousel-caption h1,
+.carousel-caption h2,
+.carousel-caption h3,
+.carousel-caption h4,
+.carousel-caption h5 {
+	color: #fff;
+}
+.transition-timer-carousel .timer {
+	position: absolute;
+	z-index: 99;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 10px;
+	background-color: rgba(0, 0, 0, .35);
+}
+.transition-timer-carousel .timer-progress {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: auto;
+	bottom: 0;
+	background-color: rgba(39, 118, 208, 1);
+}
+.transition-timer-carousel .carousel-indicators li {
+	width: 90px;
+	height: 10px;
+	margin-left: 3px;
+	margin-right: 3px;
+	border: none;
+	background-color: rgba(255, 255, 255, .35);
+}
+.transition-timer-carousel .carousel-indicators li:hover {
+	background-color: rgba(255, 255, 255, 1);
+}
+.transition-timer-carousel .carousel-indicators li.active {
+	background-color: rgba(255, 255, 255, 1);
+	background-color: rgba(39, 118, 208, 1);
 }
 .transition-timer-carousel .carousel-caption .carousel-caption-header {
 	margin-top: 10px;
